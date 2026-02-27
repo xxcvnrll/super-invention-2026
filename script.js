@@ -99,13 +99,22 @@ async function initPage(storageKey) {
         const file = e.target.files[0];
         if (!file) return;
 
-        const reader = new FileReader();
-        reader.onload = async () => {
-          data[index].img = reader.result;
+        const img2 = document.createElement('img');
+        const url = URL.createObjectURL(file);
+        img2.onload = async () => {
+          const canvas = document.createElement('canvas');
+          const MAX = 200;
+          let w = img2.width, h = img2.height;
+          if (w > h) { h = h * MAX / w; w = MAX; }
+          else { w = w * MAX / h; h = MAX; }
+          canvas.width = w;
+          canvas.height = h;
+          canvas.getContext('2d').drawImage(img2, 0, 0, w, h);
+          data[index].img = canvas.toDataURL('image/jpeg', 0.7);
           await save();
           render();
         };
-        reader.readAsDataURL(file);
+        img2.src = url;
       };
 
       cardsContainer.appendChild(card);
