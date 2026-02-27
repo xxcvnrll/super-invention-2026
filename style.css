@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Oswald";
+  background: #cfd3d6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.BODY{
+  background-color: #b7986d;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  flex: 1;
+  z-index: 1;
+}
+
+.nav a {
+  padding: 44px 30px;
+  background: #052281;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+header {
+  background: #2f4bff;
+  color: white;
+  padding: 10px;
+  font-weight: lighter;
+  font-family: "Oswald", sans-serif;
+}
+
+.header {
+  background: linear-gradient(to bottom, #041c6a, #2d3eaa);
+  color: white;
+  padding: 10px;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  justify-content: space-between;
+}
+
+.header2 {
+  background: linear-gradient(to right, #052281, #6779b6, #edf1ff);
+  color: white;
+  padding: 10px;
+  font-weight: 100;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  justify-content: space-between;
+}
+
+.header3 {
+  background: linear-gradient(to right, #052281, #8c8b7c, #ffe478);
+  color: white;
+  padding: 10px;
+  font-weight: 100;
+  display: flex;
+}
+
+.header3 h1 {
+  margin-left: 20%;
+  text-align: center;
+}
+
+.header3 img {
+  margin-left: 15%;
+}
+
+.background-image1 {
+  object-fit: cover;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+}
+
+footer {
+  background: linear-gradient(to bottom, #2d3eaa, #041c6a);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-family: "Oswald", sans-serif;
+  z-index: 1;
+  flex: 1;
+}
+
+.cards {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  gap: 20px;
+  background: #c9c8c8;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.photo {
+  width: 120px;
+  height: 160px;
+  border: 2px solid #222;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: #f2f2f2;
+}
+
+.photo span {
+  font-size: 30px;
+}
+
+.photo input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info input,
+.info textarea {
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  background: #eee;
+}
+
+.info textarea {
+  height: 70px;
+  resize: none;
+}
+
+.addBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 28px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.559);
+  background: #87b5ff;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
