@@ -43,9 +43,10 @@ header {
 }
 
 .header {
-  background: linear-gradient(to bottom, #041c6a, #2d3eaa);
+  background: linear-gradient(to bottom, #041c6a, #0c0c0c);
   color: white;
   padding: 10px;
+  padding-left: 510px;
   display: flex;
   position: relative;
   z-index: 1;
@@ -87,6 +88,34 @@ header {
   z-index: 0;
   width: 100%;
 }
+
+.blala {
+width: 20%;
+margin-top: 200px; 
+position: absolute;
+margin-left: 50px;
+z-index: 10;
+animation: pulseAnimation 2.5s ease-in-out infinite;
+}
+
+.blala2 {
+width: 24%;
+margin-top: 200px; 
+position: absolute;
+margin-left: 70%;
+z-index: 10;
+animation: pulseAnimation 2.5s ease-in-out infinite;
+}
+
+@keyframes pulseAnimation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+
 
 footer {
   background: linear-gradient(to bottom, #2d3eaa, #041c6a);
